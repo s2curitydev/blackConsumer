@@ -8,11 +8,12 @@ import About from "./pages/About";
 import { contactList } from "./js/sampleData";
 
 class App extends Component {
-  state = { contactList };
-
+  constructor(props) {
+    super(props);
+    this.state = { contactList };
+  }
   render() {
     return (
-      // console.log(contactList)
       <Router>
         <div>
           <Navbar />
@@ -22,7 +23,7 @@ class App extends Component {
                 <Home />
               </Route>
               <Route path="/Features">
-                <Features contactList={this.state} />
+                <Features contactList={contactList} />
               </Route>
               <Route path="/Pricing">
                 <Pricing />

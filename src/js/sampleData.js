@@ -65,7 +65,7 @@ export const contactList = [
   {
     idx: "10",
     name: "Lael Fewe",
-    phone: "250-328-6664",
+    phone: "250-328-4570",
     date: "2021-04-14",
     descClaim: "밥다먹고 환불요청",
   },
