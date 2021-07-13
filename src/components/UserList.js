@@ -1,21 +1,31 @@
 import React from "react";
 
-const UserList = ({ findUser, searchField }) => {
-  if (findUser !== "") {
-    return (
-      <div>
-        <div className="card mb-2 mt-2" key={findUser.idx}>
-          <div className="card-body p-3">{"Name: " + findUser.name}</div>
-        </div>
-      </div>
-    );
-  } else {
-    return <div>no data</div>;
-  }
+const UserList = ({ filteredUsers, searchField }) => {
+  console.log(filteredUsers);
+  return (
+    <div>
+      {filteredUsers.map((user) => {
+        return (
+          <div class="card mt-2 bg-light" key={user.idx}>
+            <div className="card-body">
+              <div className="card-body p-3">
+                {"Name: " + user.name.substring(0, 1)}
+              </div>
+              <div className="card-body p-3">
+                {"Phone: " +
+                  user.phone.substring(0, 1) +
+                  "**" +
+                  user.phone.substring(4, 5) +
+                  "**" +
+                  searchField}
+              </div>
+              <div className="card-body p-3">{"Date: " + user.date}</div>
+              <div className="card-body p-3">{"Claim: " + user.descClaim}</div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 };
-
 export default UserList;
-
-/* <div className="card-body p-3">{"Phone: " + findUser.phone}</div>
-<div className="card-body p-3">{"Date: " + findUser.date}</div>
-<div className="card-body p-3">{"Claim: " + findUser.descClaim}</div> */

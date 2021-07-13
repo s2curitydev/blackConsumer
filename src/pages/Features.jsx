@@ -1,28 +1,22 @@
 import React, { useState } from "react";
-// import axios from "axios";
 import UserList from "../components/UserList";
 import SearchBox from "../components/SearchBox";
-import { emptySearchField } from "../components/Exception";
 
 const Features = (props) => {
   const [users, setUsers] = useState(props.contactList);
   const [searchField, setSearchField] = useState("4570");
-  let findUser = [];
-  if (String(searchField).length === 4) {
-    const phoneNumber = users.map((user) => String(user.phone).split("-")[2]);
-    console.log(phoneNumber);
 
-    findUser = phoneNumber.map((userPhoneDigit) => {
-      if (String(searchField) === userPhoneDigit) {
-        console.log(userPhoneDigit);
+  const findUsers = users.map((user) => {
+    const phoneNumber = String(user.phone).split("-")[2];
+    if (String(searchField) === phoneNumber) {
+      return user;
+    }
+    return undefined;
+  });
 
-        return users.idx;
-      } else {
-        return null;
-      }
-    });
-  }
-  console.log(findUser);
+  console.log(findUsers);
+  const filteredUsers = findUsers.filter((x) => x !== undefined);
+  console.log("filteredUsers: ", filteredUsers);
 
   return (
     <div>
@@ -34,7 +28,7 @@ const Features = (props) => {
         }
       />
       * Believe or Not
-      <UserList searchField={searchField} findUser={findUser} />
+      <UserList searchField={searchField} filteredUsers={filteredUsers} />
     </div>
   );
 };
