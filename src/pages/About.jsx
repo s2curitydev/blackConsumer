@@ -1,12 +1,13 @@
 import React from "react";
 import image from "../assets/mainstreet.jpg";
+import ReportCase from "../components/ReportCase";
 
 const About = () => {
   return (
     <div className="mt-3">
-      <img src={image} width="335px" height="180px" />
-      <h1>Hi-Penticton.com is</h1>
-      created in order to support people who lives in Penticton.
+      <img src={image} className="img-fluid rounded mx-auto d-block" />
+      <h1>Hi-Penticton.com</h1>
+      is reated in order to support people who lives in Penticton.
       <br />
       The Penticton is one of the beautiful city in B.C.
       <br />
@@ -16,14 +17,18 @@ const About = () => {
       Feel free to help us to make this town clean and manner!!!
       <br />
       The shared information must be refered in your responsibility. The site
-      will not involve Please report any information which you prefer to share
-      with people!
+      will not be involved any situations. Please read the
+      <a href="/About"> Website Terms of Use</a> before using any features on
+      this website. <br />
       <br />
       <br />
       No registration required! <br />
       Enjoy! <br />
       <br />
-      <h5>report@hipenticton.com</h5>
+      Please report any cases if you prefer to share with people! The private
+      information will not be published includes yours.
+      <br />
+      <ReportCase />
       <br />
       <br />
       <br />

@@ -4,7 +4,7 @@ import image from "../assets/Free.jpg";
 const Pricing = () => {
   return (
     <div className="mt-3">
-      <img src={image} width="335px" height="300px" />
+      <img src={image} className="img-fluid rounded mx-auto d-block" />
     </div>
   );
 };

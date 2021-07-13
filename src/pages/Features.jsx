@@ -19,7 +19,7 @@ const Features = (props) => {
 
   return (
     <div>
-      <h1>Black Consumer Searching</h1>
+      <h1>Reasonable Claim Searching</h1>
       <SearchBox
         placeholder="Enter the Last 4 digits of the phone number"
         handleChange={(e) =>
