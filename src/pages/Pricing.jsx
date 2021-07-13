@@ -1,9 +1,10 @@
 import React from "react";
+import image from "../assets/Free.jpg";
 
 const Pricing = () => {
   return (
-    <div>
-      <h1>Pricing this page from Pricing.jsx</h1>
+    <div className="mt-3">
+      <img src={image} width="335px" height="300px" />
     </div>
   );
 };

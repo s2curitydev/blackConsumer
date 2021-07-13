@@ -6,7 +6,7 @@ const UserList = ({ filteredUsers, searchField }) => {
     <div>
       {filteredUsers.map((user) => {
         return (
-          <div class="card mt-2 bg-light" key={user.idx}>
+          <div className="card mt-2 bg-light" key={user.idx}>
             <div className="card-body">
               <div className="card-body p-3">
                 {"Name: " + user.name.substring(0, 1)}
@@ -20,7 +20,12 @@ const UserList = ({ filteredUsers, searchField }) => {
                   searchField}
               </div>
               <div className="card-body p-3">{"Date: " + user.date}</div>
-              <div className="card-body p-3">{"Claim: " + user.descClaim}</div>
+              <div className="card-body p-3">
+                {"Description: " + user.descClaim}
+              </div>
+              <div className="card-body p-3">
+                {"Consideration: " + user.consideration}
+              </div>
             </div>
           </div>
         );

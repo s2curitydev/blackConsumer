@@ -3,11 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
       <Link className="navbar-brand" to="/">
-        Home
+        Hi-Penticton.com
       </Link>
-      <button
+      {/* <button
         className="navbar-toggler"
         type="button"
         data-toggle="collapse"
@@ -17,8 +17,8 @@ const Navbar = () => {
         aria-label="Toggle navigation"
       >
         <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
+      </button> */}
+      <div className="navbar-collapse">
         <ul className="navbar-nav">
           <li className="nav-item ">
             <NavLink
@@ -30,7 +30,11 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="Pricing" activeClassName="active">
+            <NavLink
+              className="nav-link disable"
+              to="Pricing"
+              activeClassName="active"
+            >
               Pricing
             </NavLink>
           </li>
